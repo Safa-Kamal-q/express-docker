@@ -15,7 +15,7 @@ const app = express();
 app.use(express.json())
 app.use(morgan("combined"));
 
-app.get("/", (req, res) => {
+app.get("/", (req: express.Request, res: express.Response) => {
 	res.json({ msg: "Hello from express" })
 })
 
